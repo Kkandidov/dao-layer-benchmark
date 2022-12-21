@@ -1,0 +1,48 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-orderItem-table
+      author: astashonok
+      changes:
+        - createTable:
+            tableName: orderItem
+            remarks: create orderItem table
+            columns:
+              - column:
+                  name: id
+                  type: VARCHAR(100)
+                  constraints:
+                    primaryKey: true
+                    primaryKeyName: orderItemId_pk
+                    nullable: false
+              - column:
+                  name: orderId
+                  type: VARCHAR(100)
+                  constraints:
+                    foreignKey: true
+                    foreignKeyName: orderId_fk
+                    referencedTableName: order
+                    referencedColumnNames: id
+                    nullable: false
+              - column:
+                  name: productId
+                  type: VARCHAR(100)
+                  constraints:
+                    foreignKey: true
+                    foreignKeyName: productId_fk
+                    referencedTableName: product
+                    referencedColumnNames: id
+                    nullable: false
+              - column:
+                  name: number
+                  type: int
+              - column:
+                  name: active
+                  type: BOOLEAN
+                  constraints:
+                    nullable: false
+              - column:
+                  name: execTime
+                  type: timestamp
+                  defaultValue: now()
+                  constraints:
+                    nullable: false

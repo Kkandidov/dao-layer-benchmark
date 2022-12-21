@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  db-5433:
+    image: postgres:15.1-alpine
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - '5433:5432'
+    volumes: 
+      - ./db-5433:/var/lib/postgresql/data
+   

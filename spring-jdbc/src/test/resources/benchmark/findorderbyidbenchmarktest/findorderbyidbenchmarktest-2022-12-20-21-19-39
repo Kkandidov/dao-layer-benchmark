@@ -1,0 +1,104 @@
+[
+    {
+        "jmhVersion" : "1.36",
+        "benchmark" : "org.astashonok.springjdbc.FindOrderByIdBenchmarkTest.findOrderByIdThroughput",
+        "mode" : "thrpt",
+        "threads" : 1,
+        "forks" : 0,
+        "jvm" : "C:\\Users\\KostyaAstashonak\\.jdks\\corretto-11.0.16.1\\bin\\java.exe",
+        "jvmArgs" : [
+            "-server"
+        ],
+        "jdkVersion" : "11.0.16.1",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "11.0.16.1+9-LTS",
+        "warmupIterations" : 3,
+        "warmupTime" : "10 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 3,
+        "measurementTime" : "10 s",
+        "measurementBatchSize" : 1,
+        "primaryMetric" : {
+            "score" : 1.3737364792363274,
+            "scoreError" : 5.226234704050691,
+            "scoreConfidence" : [
+                -3.852498224814364,
+                6.5999711832870185
+            ],
+            "scorePercentiles" : {
+                "0.0" : 1.1185169881525283,
+                "50.0" : 1.3191075871591622,
+                "90.0" : 1.6835848623972915,
+                "95.0" : 1.6835848623972915,
+                "99.0" : 1.6835848623972915,
+                "99.9" : 1.6835848623972915,
+                "99.99" : 1.6835848623972915,
+                "99.999" : 1.6835848623972915,
+                "99.9999" : 1.6835848623972915,
+                "100.0" : 1.6835848623972915
+            },
+            "scoreUnit" : "ops/s",
+            "rawData" : [
+                [
+                    1.1185169881525283,
+                    1.3191075871591622,
+                    1.6835848623972915
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.36",
+        "benchmark" : "org.astashonok.springjdbc.FindOrderByIdBenchmarkTest.findOrderByIdAverageTime",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 0,
+        "jvm" : "C:\\Users\\KostyaAstashonak\\.jdks\\corretto-11.0.16.1\\bin\\java.exe",
+        "jvmArgs" : [
+            "-server"
+        ],
+        "jdkVersion" : "11.0.16.1",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "11.0.16.1+9-LTS",
+        "warmupIterations" : 3,
+        "warmupTime" : "10 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 3,
+        "measurementTime" : "10 s",
+        "measurementBatchSize" : 1,
+        "primaryMetric" : {
+            "score" : 7.301090388770433E7,
+            "scoreError" : 3.541437091242251E7,
+            "scoreConfidence" : [
+                3.759653297528182E7,
+                1.0842527480012684E8
+            ],
+            "scorePercentiles" : {
+                "0.0" : 7.182231214285715E7,
+                "50.0" : 7.195941071428572E7,
+                "90.0" : 7.525098880597015E7,
+                "95.0" : 7.525098880597015E7,
+                "99.0" : 7.525098880597015E7,
+                "99.9" : 7.525098880597015E7,
+                "99.99" : 7.525098880597015E7,
+                "99.999" : 7.525098880597015E7,
+                "99.9999" : 7.525098880597015E7,
+                "100.0" : 7.525098880597015E7
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    7.182231214285715E7,
+                    7.525098880597015E7,
+                    7.195941071428572E7
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    }
+]
+
+

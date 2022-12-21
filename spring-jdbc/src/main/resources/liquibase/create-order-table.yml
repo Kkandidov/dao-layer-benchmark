@@ -1,0 +1,36 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-order-table
+      author: astashonok
+      changes:
+        - createTable:
+            tableName: order
+            remarks: create order table
+            columns:
+              - column:
+                  name: id
+                  type: VARCHAR(100)
+                  constraints:
+                    primaryKey: true
+                    primaryKeyName: orderId_pk
+                    nullable: false
+              - column:
+                  name: userId
+                  type: VARCHAR(100)
+                  constraints:
+                    foreignKey: true
+                    foreignKeyName: userId_fk
+                    referencedTableName: user
+                    referencedColumnNames: id
+                    nullable: false
+              - column:
+                  name: active
+                  type: BOOLEAN
+                  constraints:
+                    nullable: false
+              - column:
+                  name: execTime
+                  type: timestamp
+                  defaultValue: now()
+                  constraints:
+                    nullable: false

@@ -1,0 +1,68 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-product-table
+      author: astashonok
+      changes:
+        - createTable:
+            tableName: product
+            remarks: create product table
+            columns:
+              - column:
+                  name: id
+                  type: VARCHAR(100)
+                  constraints:
+                    primaryKey: true
+                    primaryKeyName: productId_pk
+                    nullable: false
+              - column:
+                  name: category
+                  type: VARCHAR(100)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: brand
+                  type: VARCHAR(100)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: color
+                  type: VARCHAR(100)
+              - column:
+                  name: size
+                  type: double
+              - column:
+                  name: height
+                  type: double
+              - column:
+                  name: width
+                  type: double
+              - column:
+                  name: weight
+                  type: double
+              - column:
+                  name: screen
+                  type: double
+              - column:
+                  name: frontCamera
+                  type: double
+              - column:
+                  name: realCamera
+                  type: double
+              - column:
+                  name: capacity
+                  type: double
+              - column:
+                  name: displayTechnology
+                  type: VARCHAR(100)
+              - column:
+                  name: graphic
+                  type: VARCHAR(100)
+              - column:
+                  name: active
+                  type: boolean
+              - column:
+                  name: execTime
+                  type: timestamp
+                  defaultValue: now()
+                  constraints:
+                    nullable: false

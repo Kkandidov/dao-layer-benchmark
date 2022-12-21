@@ -1,0 +1,9 @@
+databaseChangeLog:
+  - include:
+      file: liquibase/create-user-table.yml
+  - include:
+      file: liquibase/create-product-table.yml
+  - include:
+      file: liquibase/create-order-table.yml
+  - include:
+      file: liquibase/create-orderItem-table.yml
